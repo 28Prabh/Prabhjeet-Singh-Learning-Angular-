@@ -1,0 +1,56 @@
+/* Styling for the main product container */
+.product {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+
+  /* Add hover effect */
+  &:hover {
+    transform: scale(1.02);
+    background-color: #aa7575;
+  }
+}
+
+
+
+
+/* Styling for the product title (name and ID) */
+.product h3 {
+  font-size: 1.8rem;
+  color: #2b6777;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+
+
+/* Styling for the product description */
+.product p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+
+}
+
+
+
+
+/* Styling for date and quantity */
+.product p:nth-of-type(2),
+.product p:nth-of-type(3) {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+
+/* Horizontal rule */
+.product hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}

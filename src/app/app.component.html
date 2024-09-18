@@ -1,18 +1,13 @@
-<html>
+<div *ngFor="let data of dataArray" class="product">
+  <h3>{{ data.name }} (ID: {{ data.id }})</h3>
 
-<head>
-  <title>{{title}}</title>
-</head>
-<body>
+  <!-- Conditional display for optional description -->
+  <p *ngIf="data.description">Description: {{ data.description }}</p>
+  <p *ngIf="!data.description">No description provided.</p>
 
-<h1>
-  {{fname}}
-</h1>
+  <p>Date: {{ data.Date | date: 'longDate' }}</p>
+  <p>Quantity: {{ data.quantity }}</p>
 
+  <hr>
+</div>
 
-<p>
-{{lname}}
-</p>
-
-</body>
-</html>
