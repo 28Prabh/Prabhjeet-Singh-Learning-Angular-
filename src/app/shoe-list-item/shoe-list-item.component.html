@@ -1,4 +1,4 @@
-<div class="content-list-item">
+<div class="content-list-item" [ngStyle]="{'background-color': (index ?? 0) % 2 === 0 ? 'blue' : 'grey'}">
   <h2>{{ shoe.name }}</h2>
   <p><strong>ID:</strong> {{ shoe.id }}</p>
   <p><strong>Description:</strong> {{ shoe.description ? shoe.description : 'No description available' }}</p>
