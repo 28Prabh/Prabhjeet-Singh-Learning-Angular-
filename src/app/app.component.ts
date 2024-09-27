@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {DataType} from "./DataTypeInterface/user";
+import {DataType} from "./DataTypeInterface/shoe";
 import {DatePipe, NgForOf, NgIf} from "@angular/common";
 
 

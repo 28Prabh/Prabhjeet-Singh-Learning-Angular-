@@ -1,4 +1,4 @@
-// Directory of this file src/app/DataTypeInterface.user.ts
+// Directory of this file src/app/DataTypeInterface.shoe.ts
 
 export interface DataType {
   id: number;
