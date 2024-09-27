@@ -1,21 +1,28 @@
 import { Component } from '@angular/core';
 import {ShoeListItemComponent} from "../shoe-list-item/shoe-list-item.component";
+import {NgForOf} from "@angular/common";
+import {DataType} from "../DataTypeInterface/shoe";
+
 
 @Component({
   selector: 'app-shoe-list',
   standalone: true,
   imports: [
-    ShoeListItemComponent
+    ShoeListItemComponent,
+    NgForOf
   ],
   templateUrl: './shoe-list.component.html',
   styleUrl: './shoe-list.component.css'
 })
 export class ShoeListComponent {
 
-  contentItems = [
-    { id: 1, title: 'Nike', description: 'Very stylish', imageUrl: 'assets/item1.jpg' },
-    { id: 2, title: 'Puma', description: 'Ultra soft sole', imageUrl: 'assets/item2.jpg' },
-    { id: 3, title: 'Redtape', description: 'sports perfect', imageUrl: 'assets/item3.jpg' },
-    { id: 4, title: 'Sketchers', description: 'Ultra light weight', imageUrl: 'assets/item4.jpg' }
+
+  shoeList: DataType[] = [
+    { id: 1, name: 'Item 1', description: 'Description 1', Date: new Date(), quantity: 1},
+    { id: 2, name: 'Item 2,', Date: new Date(), quantity: 2},
+    { id: 3, name: 'Item 3', description: 'Description 3', Date: new Date(), quantity: 2},
+    { id: 4, name: 'Item 4', description: 'Description 4', Date: new Date(), quantity: 3},
+    { id: 5, name: 'Item 5', Date: new Date(), quantity: 2},
+    { id: 6, name: 'Item 6', description: 'Description 6', Date: new Date(), quantity: 6}
   ];
 }

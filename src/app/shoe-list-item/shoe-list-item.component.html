@@ -1,1 +1,8 @@
-<p>shoe-list-item works!</p>
+<div class="content-list-item">
+  <h2>{{ shoe.name }}</h2>
+  <p><strong>ID:</strong> {{ shoe.id }}</p>
+  <p><strong>Description:</strong> {{ shoe.description ? shoe.description : 'No description available' }}</p>
+  <p><strong>Date:</strong> {{ shoe.date }}</p>
+  <p><strong>Quantity:</strong> {{ shoe.quantity }}</p>
+  <hr /> <!-- Optional horizontal line for separation -->
+</div>
