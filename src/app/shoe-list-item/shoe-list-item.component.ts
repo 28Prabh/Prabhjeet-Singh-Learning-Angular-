@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NgIf, NgStyle} from "@angular/common";
+import {DataType} from "../DataTypeInterface/shoe";
 
 @Component({
   selector: 'app-shoe-list-item',
@@ -12,6 +13,6 @@ import {NgIf, NgStyle} from "@angular/common";
   styleUrl: './shoe-list-item.component.css'
 })
 export class ShoeListItemComponent {
-@Input() shoe?: any;
-  @Input() index!: number;
+@Input() shoe?: DataType;
+  @Input() index?: number;
 }

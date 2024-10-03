@@ -18,8 +18,8 @@ export class ShoeServiceService {
     return of(shoeList);
   }
 
-  addShoes(newAnimal: DataType): Observable<DataType[]> {
-    this.shoes.push(newAnimal)
+  addShoes(newShoe: DataType): Observable<DataType[]> {
+    this.shoes.push(newShoe)
     return of(this.shoes);
 
   }
@@ -41,7 +41,7 @@ export class ShoeServiceService {
 
   }
 
-  deleteAnimal(shoeId: number): Observable<DataType[]> {
+  deleteShoe(shoeId: number): Observable<DataType[]> {
     this.shoes = this.shoes.filter(shoe => shoe.id !== shoeId);
     return of(this.shoes);
   }
