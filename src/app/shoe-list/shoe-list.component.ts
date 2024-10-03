@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {ShoeListItemComponent} from "../shoe-list-item/shoe-list-item.component";
 import {NgForOf} from "@angular/common";
 import {DataType} from "../DataTypeInterface/shoe";
+import {ShoeServiceService} from "../services/shoe-service.service";
 
 
 @Component({
@@ -15,14 +16,22 @@ import {DataType} from "../DataTypeInterface/shoe";
   styleUrl: './shoe-list.component.css'
 })
 export class ShoeListComponent {
+  shoeList: DataType[] = [];
+
+  constructor (private shoeService: ShoeServiceService){
+    //this constructor is primarily used for dependency injection
+  }
 
 
-  shoeList: DataType[] = [
-    { id: 1, name: 'Item 1', description: 'Description 1', Date: new Date(), quantity: 1},
-    { id: 2, name: 'Item 2,', Date: new Date(), quantity: 2},
-    { id: 3, name: 'Item 3', description: 'Description 3', Date: new Date(), quantity: 2},
-    { id: 4, name: 'Item 4', description: 'Description 4', Date: new Date(), quantity: 3},
-    { id: 5, name: 'Item 5', Date: new Date(), quantity: 2},
-    { id: 6, name: 'Item 6', description: 'Description 6', Date: new Date(), quantity: 6}
-  ];
+  ngOnInit(){
+    //This lifecycle hook is a good place to fetch and init our data
+    this.shoeService.getShoes().subscribe({
+      next: (data: DataType[]) => this.shoeList = data,
+      error:err => console.error("Error fetching Students", err),
+      complete:() => console.log("Student data fetch complete!")
+    })
+
+  }
+
+
 }
