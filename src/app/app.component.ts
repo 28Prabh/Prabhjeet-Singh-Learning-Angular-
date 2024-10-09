@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {DataType} from "./DataTypeInterface/shoe";
 import {DatePipe, NgForOf, NgIf} from "@angular/common";
 import {ShoeListComponent} from "./shoe-list/shoe-list.component";
@@ -10,7 +10,7 @@ import {ShoeServiceService} from "./services/shoe-service.service";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DatePipe, NgForOf, NgIf, ShoeListComponent, ShoeListItemComponent],
+  imports: [RouterOutlet, DatePipe, NgForOf, NgIf, ShoeListComponent, ShoeListItemComponent, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
