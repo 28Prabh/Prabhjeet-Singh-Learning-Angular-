@@ -36,10 +36,31 @@
 
 }
 
+.nav-bar {
+  background-color: #f8f9fa;
+  padding: 10px 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.nav-bar nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+.nav-bar a.active {
+  font-weight: bold;
+  color: #0056b3;
+
+}
 
 
 
-/* Styling for date and quantity */
 .product p:nth-of-type(2),
 .product p:nth-of-type(3) {
   color: #555;
@@ -48,9 +69,10 @@
 
 
 
-/* Horizontal rule */
+
 .product hr {
   border: none;
   border-top: 1px solid #eee;
   margin: 20px 0;
 }
+

@@ -1,3 +1,6 @@
 .shoe-style{
-  border: 2px solid;
-}
+  border: 2px solid; }
+
+.shoe-style:nth-child(even){
+
+  background-color: #2b6777; }
