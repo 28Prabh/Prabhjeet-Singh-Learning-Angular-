@@ -1,3 +1,5 @@
 <div *ngFor="let shoe of shoeList; let i = index">
   <app-shoe-list-item [shoe]="shoe" [index]="i"></app-shoe-list-item>
+  <button (click)="editShoe(shoe)">Edit</button>
+  <button (click)="deleteShoe(shoe.id)">Delete</button>
 </div>

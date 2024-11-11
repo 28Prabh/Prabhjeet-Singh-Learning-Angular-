@@ -10,7 +10,8 @@ import {PageNotFoundComponent} from "./app/page-not-found/page-not-found.compone
 
 
 
-const routes: Routes =[{ path: 'shoes', component: ShoeListComponent },
+const routes: Routes =[  {path:'', redirectTo: '/shoes', pathMatch: 'full'},
+  { path: 'shoes', component: ShoeListComponent },
   {path:'modify-student', component: ModifyListItemComponent},
   {path: '**', component:PageNotFoundComponent}];
 bootstrapApplication(AppComponent, {providers: [provideRouter(routes)]})

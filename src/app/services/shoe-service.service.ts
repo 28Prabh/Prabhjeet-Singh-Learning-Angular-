@@ -15,7 +15,7 @@ export class ShoeServiceService {
   constructor() { }
 
   getShoes(): Observable<DataType[]> {
-    return of(shoeList);
+    return of(this.shoes);
   }
 
   addShoes(newShoe: DataType): Observable<DataType[]> {
@@ -44,6 +44,10 @@ export class ShoeServiceService {
   deleteShoe(shoeId: number): Observable<DataType[]> {
     this.shoes = this.shoes.filter(shoe => shoe.id !== shoeId);
     return of(this.shoes);
+  }
+
+  generateNewId(): number {
+    return this.shoes.length > 0 ? Math.max(...this.shoes.map(shoe => shoe.id)) + 1 : 1;
   }
 
 }
