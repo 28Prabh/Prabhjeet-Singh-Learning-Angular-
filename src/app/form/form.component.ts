@@ -24,22 +24,30 @@ export class FormComponent implements OnInit{
     private router: Router
   ){
     this.shoeForm = this.fb.group({
-      id: ['', Validators.required],
+      id: [''],
       name: ['', Validators.required],
       description: [''],
-      date: [''],
+      Date: [''],
       quantity: ['',Validators.required]
     });
   }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
+    console.log(id);
+
     if (id) {
+
       this.shoeService.getShoeById(+id).subscribe(shoe => {
         if(shoe) {
           this.shoe = shoe;
+          console.log(shoe)
 
           this.shoeForm.patchValue(shoe);
+
+        }
+        else{
+          console.log("Creating a new value.")
         }
       });
     }
@@ -48,17 +56,23 @@ export class FormComponent implements OnInit{
   onSubmit(): void {
     const shoe: DataType = this.shoeForm.value;
 
-    // Check if we're updating an existing student
+    // Check if we're updating an existing shoe
     if (shoe.id) {
+      console.log("update");
       this.shoeService.updateShoes(shoe);
-    } else {
+      this.router.navigate(['/shoes']);
+
+    } else  {
+      console.log("valid");
       // For adding a new student, generate a new ID
-      const newId = this.shoeService.generateNewId(); // This method will create a new ID
+      const newId = this.shoeService.generateNewId();
+      // This method will create a new ID
       shoe.id = newId;
       this.shoeService.addShoes(shoe);
+      this.router.navigate(['/shoes']);
+
     }
 
-    this.router.navigate(['/shoes']);
   }
 
 }

@@ -4,6 +4,6 @@ export interface DataType {
   id: number;
   name: string;
   description?: string; // Optional property
-  Date: Date;
+  Date: Date ;
   quantity: number;
 }
