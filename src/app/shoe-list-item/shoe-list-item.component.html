@@ -5,7 +5,7 @@
   <p><strong>Date:</strong> {{ shoe.Date | date }}</p>
   <p><strong>Quantity:</strong> {{ shoe.quantity | number:'1.1' }}</p>
 <!--  <img src="Gallery/Shoe{{shoe.id}}.png" alt="Shoes images">-->
-  <p><strong>Reviews:</strong>{{shoe.review | starPipe}}</p>
+  <p><strong>Reviews:</strong>{{shoe.review! | starPipe}}</p>
 
 </div>
 
