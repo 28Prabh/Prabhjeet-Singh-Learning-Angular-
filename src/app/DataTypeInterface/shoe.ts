@@ -6,4 +6,5 @@ export interface DataType {
   description?: string; // Optional property
   Date: string ;
   quantity: number;
+  review?:string
 }
