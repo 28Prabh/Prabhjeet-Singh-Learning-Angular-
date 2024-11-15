@@ -6,9 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class StarPipePipe implements PipeTransform {
 
-  transform(star:string): unknown {
+  transform(star:string): string {
     const betterStars = star.replaceAll("*","\u2605");
-    return betterStars;
+    return betterStars.toString();
   }
 
 }
