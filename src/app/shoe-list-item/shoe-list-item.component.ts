@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {DatePipe, NgIf, NgStyle} from "@angular/common";
+import {DatePipe, DecimalPipe, NgIf, NgStyle, TitleCasePipe} from "@angular/common";
 import {DataType} from "../DataTypeInterface/shoe";
 
 @Component({
@@ -8,7 +8,9 @@ import {DataType} from "../DataTypeInterface/shoe";
   imports: [
     NgStyle,
     NgIf,
-    DatePipe
+    DatePipe,
+    TitleCasePipe,
+    DecimalPipe
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'
