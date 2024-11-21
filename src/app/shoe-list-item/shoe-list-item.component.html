@@ -1,4 +1,4 @@
-<div *ngIf="shoe" class="shoe-style">
+<div *ngIf="shoe" class="shoe-style" [appHoverHighlight]="'lightblue'">
 <h2>{{ shoe.name }}</h2>
   <p><strong>ID:</strong> {{ shoe.id }}</p>
   <p><strong>Description:</strong> {{ shoe.description | titlecase }}</p>

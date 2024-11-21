@@ -3,12 +3,16 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 import {ActivatedRoute, Router} from "@angular/router";
 import {ShoeServiceService} from "../services/shoe-service.service";
 import {DataType} from "../DataTypeInterface/shoe";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 
 @Component({
   selector: 'app-form',
   standalone: true,
   imports: [
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HoverHighlightDirective,
+    HighlightOnFocusDirective
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'

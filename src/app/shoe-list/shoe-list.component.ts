@@ -4,6 +4,7 @@ import {NgForOf} from "@angular/common";
 import {DataType} from "../DataTypeInterface/shoe";
 import {ShoeServiceService} from "../services/shoe-service.service";
 import {Router, RouterLink} from "@angular/router";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 
 @Component({
@@ -12,7 +13,8 @@ import {Router, RouterLink} from "@angular/router";
   imports: [
     ShoeListItemComponent,
     NgForOf,
-    RouterLink
+    RouterLink,
+    HoverHighlightDirective
   ],
   templateUrl: './shoe-list.component.html',
   styleUrl: './shoe-list.component.css'

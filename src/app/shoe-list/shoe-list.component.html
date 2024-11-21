@@ -1,5 +1,5 @@
 <div *ngFor="let shoe of shoeList; let i = index ">
   <app-shoe-list-item [shoe]="shoe" [index]="i" ></app-shoe-list-item>
-  <button [routerLink]="['/modify-student',shoe.id ]">Edit</button>
-  <button (click)="deleteShoe(shoe.id)">Delete</button>
+  <button [routerLink]="['/modify-student',shoe.id ]" [appHoverHighlight]="'lightblue'">Edit</button>
+  <button (click)="deleteShoe(shoe.id)" [appHoverHighlight]="'lightblue'">Delete</button>
 </div>
