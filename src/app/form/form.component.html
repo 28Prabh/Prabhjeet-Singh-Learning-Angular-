@@ -3,32 +3,52 @@
   <p>If you are creating a new Shoe.</p>
   <p>  DO NOT INCLUDE ID.</p>
   <div class="form-group">
-    <label for="id">ID</label>
+
+
+    <mat-label>ID</mat-label>
+    <mat-form-field appearance="outline" class="form-field" disabled>
     <input type="number" id="id" formControlName="id" [appHighlightOnFocus]="'lightblue'" />
+    </mat-form-field>
   </div>
 
   <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" id="name" formControlName="name" [appHighlightOnFocus]="'aquamarine'" />
+
+    <mat-label>Name</mat-label>
+    <mat-form-field appearance="outline" class="form-field" disabled>
+
+    <input   type="text" id="name" formControlName="name"  [appHighlightOnFocus]="'aquamarine'" />
+    </mat-form-field>
   </div>
 
   <div class="form-group">
-    <label for="description">Description</label>
-    <input type="text" id="description" formControlName="description" [appHighlightOnFocus]="'bisque'"/>
+    <mat-label >Description</mat-label>
+    <mat-form-field appearance="outline" class="form-field" disabled>
+
+    <input  type="text" id="description" formControlName="description" [appHighlightOnFocus]="'bisque'"/>
+    </mat-form-field>
+
   </div>
 
   <div class="form-group">
-    <label for="Date">Date</label>
-    <input type="Date" id="Date" formControlName="Date" [appHighlightOnFocus]="'salmon'"/>
+    <mat-label >Date</mat-label>
+    <mat-form-field appearance="outline" class="form-field" disabled>
+
+    <input  type="Date" id="Date" formControlName="Date" [appHighlightOnFocus]="'salmon'"/>
+    </mat-form-field>
+
   </div>
 
 
   <div class="form-group">
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" formControlName="quantity" [appHighlightOnFocus]="'orange'" />
+    <mat-label>Quantity</mat-label>
+    <mat-form-field appearance="outline" class="form-field" disabled>
+
+    <input  type="number" id="quantity" formControlName="quantity" [appHighlightOnFocus]="'orange'" />
+    </mat-form-field>
+
   </div>
 
   <!-- Submit Button  -->
-  <button [appHoverHighlight]="'lightblue'" type="submit" >Submit</button>
+  <button [appHoverHighlight]="'lightblue'" mat-raised-button color="primary" type="submit" >Submit</button>
 
 </form>

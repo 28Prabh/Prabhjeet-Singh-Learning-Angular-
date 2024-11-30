@@ -3,6 +3,11 @@ import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
 import {provideRouter, Routes} from "@angular/router";
 import {ShoeListComponent} from "./app/shoe-list/shoe-list.component";
+import {provideAnimationsAsync} from "@angular/platform-browser/animations/async";
+import {MatTableModule} from "@angular/material/table";
+import {MatButtonModule} from "@angular/material/button";
+import {importProvidersFrom} from "@angular/core";
+import {MatIconModule} from "@angular/material/icon";
 
 
 

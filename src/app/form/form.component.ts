@@ -5,6 +5,9 @@ import {ShoeServiceService} from "../services/shoe-service.service";
 import {DataType} from "../DataTypeInterface/shoe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
+import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from "@angular/material/button";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @Component({
   selector: 'app-form',
@@ -12,7 +15,10 @@ import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.direct
   imports: [
     ReactiveFormsModule,
     HoverHighlightDirective,
-    HighlightOnFocusDirective
+    HighlightOnFocusDirective,
+    MatInputModule,
+    MatButtonModule,
+    MatTooltipModule,
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.css'

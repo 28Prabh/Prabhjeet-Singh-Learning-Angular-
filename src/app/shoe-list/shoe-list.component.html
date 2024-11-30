@@ -1,5 +1,6 @@
 <div *ngFor="let shoe of shoeList; let i = index ">
   <app-shoe-list-item [shoe]="shoe" [index]="i" ></app-shoe-list-item>
-  <button [routerLink]="['/modify-student',shoe.id ]" [appHoverHighlight]="'lightblue'">Edit</button>
-  <button (click)="deleteShoe(shoe.id)" [appHoverHighlight]="'lightblue'">Delete</button>
+  <button [routerLink]="['/modify-student',shoe.id ]" mat-raised-button color="primary" [appHoverHighlight]="'lightblue'">Edit</button>
+  <button (click)="deleteShoe(shoe.id)"  mat-raised-button color="primary" [appHoverHighlight]="'lightblue'">Delete</button>
 </div>
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[2, 4]" showFirstLastButtons></mat-paginator>

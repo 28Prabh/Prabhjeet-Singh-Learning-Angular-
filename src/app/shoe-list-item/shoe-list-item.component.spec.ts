@@ -14,7 +14,7 @@ describe('ShoeListItemComponent', () => {
 
     fixture = TestBed.createComponent(ShoeListItemComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.detectChanges(); bhv h
   });
 
   it('should create', () => {

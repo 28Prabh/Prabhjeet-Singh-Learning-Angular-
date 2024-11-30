@@ -5,12 +5,13 @@ import {DatePipe, NgForOf, NgIf} from "@angular/common";
 import {ShoeListComponent} from "./shoe-list/shoe-list.component";
 import {ShoeListItemComponent} from "./shoe-list-item/shoe-list-item.component";
 import {ShoeServiceService} from "./services/shoe-service.service";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, DatePipe, NgForOf, NgIf, ShoeListComponent, ShoeListItemComponent, RouterLinkActive, RouterLink],
+  imports: [RouterOutlet, DatePipe, NgForOf, NgIf, ShoeListComponent, ShoeListItemComponent, RouterLinkActive, RouterLink,MatToolbarModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

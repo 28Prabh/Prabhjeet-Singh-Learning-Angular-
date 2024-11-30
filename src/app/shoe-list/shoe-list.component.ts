@@ -5,6 +5,8 @@ import {DataType} from "../DataTypeInterface/shoe";
 import {ShoeServiceService} from "../services/shoe-service.service";
 import {Router, RouterLink} from "@angular/router";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatPaginatorModule} from "@angular/material/paginator";
+import {MatButtonModule} from "@angular/material/button";
 
 
 @Component({
@@ -14,7 +16,9 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     ShoeListItemComponent,
     NgForOf,
     RouterLink,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatPaginatorModule,
+    MatButtonModule
   ],
   templateUrl: './shoe-list.component.html',
   styleUrl: './shoe-list.component.css'

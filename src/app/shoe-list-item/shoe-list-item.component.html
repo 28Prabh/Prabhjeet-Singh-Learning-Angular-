@@ -1,4 +1,8 @@
 <div *ngIf="shoe" class="shoe-style" [appHoverHighlight]="'lightblue'">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Shoe Details</mat-card-title>
+    </mat-card-header>
 <h2>{{ shoe.name }}</h2>
   <p><strong>ID:</strong> {{ shoe.id }}</p>
   <p><strong>Description:</strong> {{ shoe.description | titlecase }}</p>
@@ -6,6 +10,9 @@
   <p><strong>Quantity:</strong> {{ shoe.quantity | number:'1.1' }}</p>
 <!--  <img src="Gallery/Shoe{{shoe.id}}.png" alt="Shoes images">-->
   <p><strong>Reviews:</strong>{{shoe.review! | starPipe}}</p>
+  </mat-card>
 
 </div>
+
+
 

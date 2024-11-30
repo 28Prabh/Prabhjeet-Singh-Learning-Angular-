@@ -3,6 +3,7 @@ import {DatePipe, DecimalPipe, NgIf, NgStyle, TitleCasePipe} from "@angular/comm
 import {DataType} from "../DataTypeInterface/shoe";
 import {StarPipePipe} from "../pipes/star-pipe.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatCardModule} from "@angular/material/card";
 
 @Component({
   selector: 'app-shoe-list-item',
@@ -14,12 +15,12 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     TitleCasePipe,
     DecimalPipe,
     StarPipePipe,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatCardModule
   ],
   templateUrl: './shoe-list-item.component.html',
   styleUrl: './shoe-list-item.component.css'
 })
 export class ShoeListItemComponent {
 @Input() shoe?: DataType;
-  @Input() index?: number;
-}
+  @Input() index?: number;}
